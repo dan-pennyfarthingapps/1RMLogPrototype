@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="1RMLogPrototype/LogScreen.cs">
+    <Files>
+      <File FileName="1RMLogPrototype/AppDelegate.cs" Line="112" Column="40" />
+      <File FileName="1RMLogPrototype/Exercise.cs" Line="38" Column="4" />
+      <File FileName="1RMLogPrototype/ExerciseList.cs" Line="10" Column="4" />
+      <File FileName="../../Downloads/xamarin-monotouch-element-pack-ad9d2c1/Makefile" Line="5" Column="1" />
+      <File FileName="1RMLogPrototype/LogScreen.cs" Line="35" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
