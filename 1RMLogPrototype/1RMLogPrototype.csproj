@@ -91,14 +91,7 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Exercise.cs" />
-    <Compile Include="LogScreen.cs" />
-    <Compile Include="LogScreen.designer.cs">
-      <DependentUpon>LogScreen.cs</DependentUpon>
-    </Compile>
     <Compile Include="ExerciseList.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <InterfaceDefinition Include="LogScreen.xib" />
-  </ItemGroup>
 </Project>

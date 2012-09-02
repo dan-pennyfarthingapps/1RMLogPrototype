@@ -4,6 +4,7 @@ using System.Linq;
 using MonoTouch.Dialog;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using ElementPack;
 
 namespace RMLogPrototype
 {
@@ -13,7 +14,7 @@ namespace RMLogPrototype
 	[Register ("AppDelegate")]
 	public partial class AppDelegate : UIApplicationDelegate
 	{
-				// class-level declarations
+		// class-level declarations
 		UIWindow window;
 		UINavigationController navigation;
 		UIBarButtonItem addbutton;
@@ -103,17 +104,32 @@ namespace RMLogPrototype
 
 		public void ExerciseLog(Exercise exercise)
 		{
-			Exercise e = exercise;
+			Exercise ex = exercise;
 
-			RootElement logRoot = new RootElement (e.Name + " log") { };
-			Section entries = e.getAllEntries();
+			RootElement logRoot = new RootElement (ex.Name + " log") { };
+			var dvc = new DialogViewController (logRoot, true);
+
+			Section entries = ex.getAllEntries();
 			logRoot.Add (entries);
 			
-			// TODO add the ability to add logs.
-			
+
+			UIBarButtonItem addButton = new UIBarButtonItem(UIBarButtonSystemItem.Add);
+
+
+			dvc.NavigationItem.RightBarButtonItem = addButton;
+
+			//
+			// TODO: add logic to grab the last weight value to make it easier to change
+			// 
+			addButton.Clicked += (sender, e) => {
+				CounterElement entry = new CounterElement(DateTime.Now.ToShortDateString(), "150.5");
+
+				entries.Insert(0, entry);			// put new one on top
+				ex.LogRM(DateTime.Now, 150.5);		// add it to the exercise list in the obj
+			};
 		
 
-			var dvc = new DialogViewController (logRoot, true);
+
 			navigation.PushViewController (dvc, true);
 
 		}
