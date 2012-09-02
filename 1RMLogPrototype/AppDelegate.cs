@@ -122,10 +122,16 @@ namespace RMLogPrototype
 			// TODO: add logic to grab the last weight value to make it easier to change
 			// 
 			addButton.Clicked += (sender, e) => {
-				CounterElement entry = new CounterElement(DateTime.Now.ToShortDateString(), "150.5");
+				DateTime creationDate = new DateTime();
+				creationDate = DateTime.Now;
+				ex.LogRM(creationDate, 150.5);		// add it to the exercise list in the obj
+
+				StyledStringElement entry = ex.getEntryForKey(creationDate);
+
+				//CounterElement entry = new CounterElement(DateTime.Now.ToShortDateString(), "150.5");
 
 				entries.Insert(0, entry);			// put new one on top
-				ex.LogRM(DateTime.Now, 150.5);		// add it to the exercise list in the obj
+
 			};
 		
 

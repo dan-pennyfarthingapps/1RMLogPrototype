@@ -46,11 +46,8 @@ namespace RMLogPrototype
 
 					var currentKey = key;	
 
-					StyledStringElement newExercise = new StyledStringElement (key.ToString() + " - " + this._rmLog[key].ToString(), () => { EditEntryScreen (currentKey); });
-					newExercise.Accessory = UITableViewCellAccessory.DisclosureIndicator;
-					//newExercise.Value = this._rmLog[key].ToString();
+					StyledStringElement newExercise = getEntryForKey (currentKey);
 
-					//CounterElement entry = new CounterElement(key.ToString(), this._rmLog[key].ToString());
 					sect.Add(newExercise);
 				}
 
@@ -60,6 +57,15 @@ namespace RMLogPrototype
 
 			return sect;
 
+		}
+
+		public StyledStringElement getEntryForKey (DateTime key)
+		{
+			StyledStringElement newExercise = new StyledStringElement (key.ToString() + " - " + this._rmLog[key].ToString(), () => { EditEntryScreen (key); });
+			newExercise.Accessory = UITableViewCellAccessory.DisclosureIndicator;
+
+			return newExercise;
+					
 		}
 
 		public void EditEntryScreen (DateTime key) {
