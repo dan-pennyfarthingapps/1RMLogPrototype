@@ -43,8 +43,15 @@ namespace RMLogPrototype
 
 			Section sect = new Section("1RM entries") { };
 				foreach (var key in list) {
-					CounterElement entry = new CounterElement(key.ToString(), this._rmLog[key].ToString());
-					sect.Add(entry);
+
+					var currentKey = key;	
+
+					StyledStringElement newExercise = new StyledStringElement (key.ToString() + " - " + this._rmLog[key].ToString(), () => { EditEntryScreen (currentKey); });
+					newExercise.Accessory = UITableViewCellAccessory.DisclosureIndicator;
+					//newExercise.Value = this._rmLog[key].ToString();
+
+					//CounterElement entry = new CounterElement(key.ToString(), this._rmLog[key].ToString());
+					sect.Add(newExercise);
 				}
 
 
@@ -52,6 +59,11 @@ namespace RMLogPrototype
 			
 
 			return sect;
+
+		}
+
+		public void EditEntryScreen (DateTime key) {
+			// todo add the edit screen here.
 
 		}
 	}
