@@ -80,9 +80,6 @@
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
     <Reference Include="MonoTouch.Dialog-1" />
-    <Reference Include="ElementPack">
-      <HintPath>..\..\..\Downloads\xamarin-monotouch-element-pack-ad9d2c1\ElementPack\bin\Release\ElementPack.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -92,6 +89,9 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Exercise.cs" />
     <Compile Include="ExerciseList.cs" />
+    <Compile Include="CounterElement.cs" />
+    <Compile Include="RowBadgeElement.cs" />
+    <Compile Include="SimpleMultilineEntryElement.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
