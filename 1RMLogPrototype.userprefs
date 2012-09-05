@@ -1,8 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="1RMLogPrototype/Exercise.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="1RMLogPrototype/AppDelegate.cs">
     <Files>
-      <File FileName="1RMLogPrototype/AppDelegate.cs" Line="120" Column="4" />
+      <File FileName="1RMLogPrototype/AppDelegate.cs" Line="21" Column="31" />
       <File FileName="1RMLogPrototype/Exercise.cs" Line="50" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
